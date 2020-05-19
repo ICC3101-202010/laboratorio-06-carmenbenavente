@@ -9,7 +9,7 @@ namespace Lab_6
     {
         private string name;
         private string rut;
-        private List<División> divisiones;
+        private List<División> divisiones = new List<División>();
 
         public Empresa(string name, string rut)
         {
@@ -30,7 +30,7 @@ namespace Lab_6
 
         public override string ToString()
         {
-            return name +": " + rut;
+            return name +": " + rut + " " + divisiones;
         }
     }
 }

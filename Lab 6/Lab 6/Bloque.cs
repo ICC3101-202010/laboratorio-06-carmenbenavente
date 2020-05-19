@@ -6,8 +6,12 @@ namespace Lab_6
 {
     public class Bloque : División
     {
-        private List<Persona> personas;
+        private List<Persona> personas = new List<Persona>();
 
         public List<Persona> Personas { get => personas; set => personas = value; }
+        public override string ToString()
+        {
+            return Tipo + " " + Name + "; " + Encargado + " " + personas;
+        }
     }
 }
