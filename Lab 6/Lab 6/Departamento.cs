@@ -12,7 +12,12 @@ namespace Lab_6
         public List<Seccion> Secciones { get => secciones; set => secciones = value; }
         public override string ToString()
         {
-            return Tipo + " " + Name + "; " + Encargado + " " + secciones;
+            string s = Tipo + " " + Name + "; " + Encargado.ToString();
+            foreach (Seccion d in secciones)
+            {
+                s = s + " " + d.ToString();
+            }
+            return s;
         }
     }
 }

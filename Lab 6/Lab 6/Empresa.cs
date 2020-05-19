@@ -30,7 +30,12 @@ namespace Lab_6
 
         public override string ToString()
         {
-            return name +": " + rut + " " + divisiones;
+            string s = name + ": " + rut;
+            foreach (División d in divisiones)
+            {
+                s = s + " " + d.ToString();
+            }
+            return s;
         }
     }
 }

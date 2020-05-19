@@ -12,7 +12,12 @@ namespace Lab_6
         public List<Bloque> Bloques { get => bloques; set => bloques = value; }
         public override string ToString()
         {
-            return Tipo + " " + Name + "; " + Encargado + " " + bloques;
+            string s = Tipo + " " + Name + "; " + Encargado.ToString();
+            foreach (Bloque d in bloques)
+            {
+                s = s + " " + d.ToString();
+            }
+            return s;
         }
     }
 }

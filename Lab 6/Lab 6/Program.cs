@@ -21,6 +21,7 @@ namespace Lab_6
                     try
                     {
                         empresas = LoadE();
+                        Console.WriteLine(empresas.ToString());
                     }
                     catch (FileNotFoundException exp)
                     {
