@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Lab_6
 {
+    [Serializable]
     public class Area : División
     {
         private List<Departamento> departamentos = new List<Departamento>();

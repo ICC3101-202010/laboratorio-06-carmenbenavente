@@ -11,9 +11,10 @@ namespace Lab_6
         static void Main(string[] args)
         {
             List<Empresa> empresas = new List<Empresa>();
-            while (true)
+            bool n = true;
+            while (n)
             {
-                Console.WriteLine("¿Quiere utilizar un archivo para cargar la información de la empresa?: \n (1) Sí \n (2) No");
+                Console.WriteLine("¿Quiere utilizar un archivo para cargar la información de la empresa?: \n (1) Sí \n (2) No \n (3) Cerrar programa");
                 int option = int.Parse(Console.ReadLine());
                 if (option == 1)
                 {
@@ -148,6 +149,10 @@ namespace Lab_6
                         Console.WriteLine(exp2.Message);
                     }
                 }
+                else if (option == 3)
+                {
+                    n = false;
+                }
             }
         }
 
@@ -157,6 +162,7 @@ namespace Lab_6
             Stream stream = new FileStream("empresa.bin", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, empresas);
             stream.Close();
+            Console.WriteLine("Se ha guardado correctamente");
         }
 
         static private List<Empresa> LoadE()
@@ -165,6 +171,7 @@ namespace Lab_6
             Stream stream = new FileStream("empresa.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             List<Empresa> empresas = (List<Empresa>)formatter.Deserialize(stream);
             stream.Close();
+            Console.WriteLine("Se ha cargado correctamente");
             return empresas;
         }
     }

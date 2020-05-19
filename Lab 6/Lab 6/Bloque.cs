@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Lab_6
 {
+    [Serializable]
     public class Bloque : División
     {
         private List<Persona> personas = new List<Persona>();
