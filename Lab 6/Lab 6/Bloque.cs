@@ -12,12 +12,12 @@ namespace Lab_6
         public List<Persona> Personas { get => personas; set => personas = value; }
         public override string ToString()
         {
-            string s = Tipo + " " + Name + "; " + Encargado.ToString();
+            string s = "\n" + Tipo + " " + Name + "; " + Encargado.ToString();
             foreach (Persona d in personas)
             {
                 s = s + " " + d.ToString();
             }
-            return s;
+            return s + "\n";
         }
     }
 }

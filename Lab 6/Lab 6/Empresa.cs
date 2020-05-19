@@ -30,10 +30,10 @@ namespace Lab_6
 
         public override string ToString()
         {
-            string s = name + ": " + rut;
+            string s = "Nombre Empresa: " + name + " Rut: " + rut;
             foreach (División d in divisiones)
             {
-                s = s + " " + d.ToString();
+                s = s + " " + d.ToString() + "\n";
             }
             return s;
         }

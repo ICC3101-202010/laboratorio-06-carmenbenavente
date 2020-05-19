@@ -27,7 +27,7 @@ namespace Lab_6
 
         public override string ToString()
         {
-            return name + " " + lastname + "; " + rut + " " + position;
+            return "\n" + name + " " + lastname + "; " + rut + " " + position + "\n";
         }
     }
 }

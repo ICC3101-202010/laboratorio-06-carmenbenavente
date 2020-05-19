@@ -21,7 +21,10 @@ namespace Lab_6
                     try
                     {
                         empresas = LoadE();
-                        Console.WriteLine(empresas.ToString());
+                        foreach (Empresa t in empresas)
+                        {
+                            Console.WriteLine(t.ToString());
+                        }
                     }
                     catch (FileNotFoundException exp)
                     {
