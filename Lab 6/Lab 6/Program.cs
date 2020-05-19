@@ -56,6 +56,12 @@ namespace Lab_6
                 }
             }
         }
+
+        private static void SerializationException()
+        {
+            Console.WriteLine("No se ha encontrado el archivo, vuelva a iniciar el programa indicando la opción 2");
+        }
+
         static private void SaveE(List<Empresa> empresas)
         {
             IFormatter formatter = new BinaryFormatter();
